@@ -51,7 +51,7 @@ public class FetchedAdapter extends RecyclerView.Adapter<FetchedAdapter.ViewHold
         holder.mAuthor.setText("Published At:-" + modelClassList.get(position).getAuthor());
         holder.mHeading.setText("Published At:-" + modelClassList.get(position).getTitle());
         holder.mContent.setText("Published At:-" + modelClassList.get(position).getDescription());
-        Glide.with(context).load(modelClassList.get(position).getUrlToImage()).placeholder(R.drawable.ic_launcher_background).into(holder.imageView);
+        Glide.with(context).load(modelClassList.get(position).getUrlToImage()).placeholder(R.drawable.loading_image).into(holder.imageView);
     }
 
     @Override

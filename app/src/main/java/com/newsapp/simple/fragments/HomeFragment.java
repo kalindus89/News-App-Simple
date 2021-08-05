@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.newsapp.simple.FetchedAdapter;
 import com.newsapp.simple.R;
 import com.newsapp.simple.api.ApiClient;
@@ -32,7 +33,7 @@ public class HomeFragment extends Fragment {
     FetchedAdapter fetchedAdapter;
     String country="us";
     RecyclerView recyclerViewHomeFragment;
-
+    private ShimmerFrameLayout shimmerFrameLayout_list;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,6 +45,10 @@ public class HomeFragment extends Fragment {
         recyclerViewHomeFragment.setLayoutManager(new LinearLayoutManager(getContext()));
         fetchedAdapter= new FetchedAdapter(getContext(),modelClassList);
         recyclerViewHomeFragment.setAdapter(fetchedAdapter);
+
+        shimmerFrameLayout_list = (ShimmerFrameLayout) v.findViewById(R.id.shimmerFrameLayout_list);
+        shimmerFrameLayout_list.setVisibility(View.VISIBLE);
+        shimmerFrameLayout_list.startShimmer();
         
         findNews();
 
@@ -58,6 +63,9 @@ public class HomeFragment extends Fragment {
                 if(response.isSuccessful()){
                     modelClassList.addAll(response.body().getArticles());
                     fetchedAdapter.notifyDataSetChanged();
+
+                    shimmerFrameLayout_list.setVisibility(View.GONE);
+                    shimmerFrameLayout_list.stopShimmer();
                 }
 
             }
