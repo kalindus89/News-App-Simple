@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/navigationBar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
@@ -28,18 +28,36 @@
             android:layout_marginRight="2dp"
             android:layout_marginBottom="2dp"
             app:srcCompat="@drawable/home_icon"
-            app:tint="#565A5A" />
+            app:tint="#F47D8A" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:text="HOT NEWS"
+            android:layout_weight="1"
             android:textColor="#fff"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/country_code_drawer"
+            android:padding="5dp"
+            app:ccp_defaultNameCode="US"
+            app:ccp_autoDetectCountry="false"
+            app:ccp_showFullName="false"
+            app:ccp_showPhoneCode="false"
+            app:ccp_countryPreference="ae,ar,at,au,be,bg,br,ca,ch,cn,co,cu,cz,de,eg,fr,gb,gr,hk,hu,id,ie,il,in,it,jp,kr,lt,lv,ma,mx,my,ng,nl,no,nz,ph,pl,pt,ro,rs,ru,sa,se,sg,si,sk,th,tr,tw,ua,us,ve,za"
+            app:ccp_textSize="12sp"
+
+            />
     </LinearLayout>
 
 

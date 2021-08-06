@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.newsapp.simple.FetchedAdapter;
+import com.newsapp.simple.MainActivity;
 import com.newsapp.simple.R;
 import com.newsapp.simple.api.ApiClient;
 import com.newsapp.simple.api.ApiInterface;
@@ -31,7 +32,7 @@ public class HomeFragment extends Fragment {
     String apiNews ="6fa171f4d05742f6bd1cb246539f50ad";
     List<ModelClass> modelClassList;
     FetchedAdapter fetchedAdapter;
-    String country="us";
+    //String country="us";
     RecyclerView recyclerViewHomeFragment;
     private ShimmerFrameLayout shimmerFrameLayout_list;
     @Nullable
@@ -56,7 +57,8 @@ public class HomeFragment extends Fragment {
     }
 
     private void findNews() {
-        ApiClient.getApiClient().create(ApiInterface.class).getNews(country,30,apiNews).enqueue(new Callback<MainNews>() {
+
+        ApiClient.getApiClient().create(ApiInterface.class).getNews(MainActivity.selectCountry,30,apiNews).enqueue(new Callback<MainNews>() {
             @Override
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
 

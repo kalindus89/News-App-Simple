@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+import com.hbb20.CountryCodePicker;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     TabItem mHome, msScience, mHealth, mTech, mEntertainment,mSports;
     Toolbar mToolbar;
     PagerAdapter pagerAdapter;
+    public static String selectCountry = "us";
+    CountryCodePicker countryCodePicker;
 
     // get from newsapi.com
     String api ="6fa171f4d05742f6bd1cb246539f50ad";
@@ -33,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         mTech=findViewById(R.id.technology);
         mEntertainment=findViewById(R.id.entertainment);
         mSports=findViewById(R.id.sports);
+        countryCodePicker =findViewById(R.id.ccp);
+        countryCodePicker.setAutoDetectedCountry(false);
+        countryCodePicker.setCountryForNameCode("US");
+
 
         ViewPager viewPager =findViewById(R.id.fragmentContainer);
         tabLayout=findViewById(R.id.include);
@@ -61,6 +68,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        countryCodePicker.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
+            @Override
+            public void onCountrySelected() {
+                selectCountry=countryCodePicker.getSelectedCountryNameCode();
+
+                viewPager.setAdapter(pagerAdapter);
+                viewPager.setCurrentItem(0);
+                pagerAdapter.notifyDataSetChanged();
+            }
+        });
+
 
         //for swiping to change fragment
         viewPager.addOnPageChangeListener( new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

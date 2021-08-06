@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.newsapp.simple.FetchedAdapter;
+import com.newsapp.simple.MainActivity;
 import com.newsapp.simple.R;
 import com.newsapp.simple.api.ApiClient;
 import com.newsapp.simple.api.ApiInterface;
@@ -51,7 +52,7 @@ public class ScienceFragment extends Fragment {
     }
 
     private void findNews() {
-        ApiClient.getApiClient().create(ApiInterface.class).getCategoryNews(country,category,30,apiNews).enqueue(new Callback<MainNews>() {
+        ApiClient.getApiClient().create(ApiInterface.class).getCategoryNews(MainActivity.selectCountry,category,30,apiNews).enqueue(new Callback<MainNews>() {
             @Override
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
 

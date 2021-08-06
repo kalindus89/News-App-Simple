@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.newsapp.simple.fragments.EntertainmentFragment;
 import com.newsapp.simple.fragments.HealthFragment;
@@ -12,7 +13,7 @@ import com.newsapp.simple.fragments.ScienceFragment;
 import com.newsapp.simple.fragments.SportsFragment;
 import com.newsapp.simple.fragments.TechnologyFragment;
 
-public class PagerAdapter extends FragmentPagerAdapter {
+public class PagerAdapter extends FragmentStatePagerAdapter {
 
     int tabCount;
 

@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/navigationBar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
@@ -28,17 +28,17 @@
             android:layout_marginRight="2dp"
             android:layout_marginBottom="2dp"
             app:srcCompat="@drawable/home_icon"
-            app:tint="#565A5A" />
+            app:tint="#F47D8A" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:text="HOT NEWS"
             android:textColor="#fff"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -78,10 +78,21 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <ProgressBar
+        android:id="@+id/progressBar_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/Widget.AppCompat.ProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
     <WebView
         android:id="@+id/webViewNews"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
