@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="275dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp">
+    android:layout_marginTop="15dp">
 
 
     <androidx.cardview.widget.CardView
@@ -22,6 +21,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -33,7 +34,7 @@
                 android:padding="5dp"
                 android:text="Main heading display here main heading display here ain heading display here main heading display here"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -48,10 +49,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:ellipsize="end"
-                    android:maxLines="6"
+                    android:maxLines="7"
                     android:padding="5dp"
-                    android:text="Main heading display here main heading display here ain heading display here main heading display here"
-                    android:textSize="20sp" />
+                    android:textStyle="italic"
+                    android:text="Main heading display here main heading display here ain heading display here main heading display hereMain heading display here main heading display here ain heading display here main heading display here"
+                    android:textSize="14dp" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/offer_cardView"

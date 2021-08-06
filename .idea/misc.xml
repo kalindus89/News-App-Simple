@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/drawable/home_icon.xml" value="0.2703125" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/drawable/round_border.xml" value="0.3828125" />
+        <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/drawable/top_bar_gradient.xml" value="0.2703125" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/entertainment_fragment.xml" value="0.22735507246376813" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/health_fragment.xml" value="0.22735507246376813" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/home_fragment.xml" value="0.22735507246376813" />
-        <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/layout_item.xml" value="0.2" />
+        <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/layout_item.xml" value="0.264" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/science_fragment.xml" value="0.22735507246376813" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/shimmer_effect_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Work/Android/AndroidStudioProjects/AndroidStudioProjectsAll/NewsAppSimple/app/src/main/res/layout/shimmer_preview.xml" value="0.264" />

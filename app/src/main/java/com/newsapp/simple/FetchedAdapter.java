@@ -48,9 +48,18 @@ public class FetchedAdapter extends RecyclerView.Adapter<FetchedAdapter.ViewHold
         });
 
         holder.mTime.setText("Published At:-" + modelClassList.get(position).getPublishedAt());
-        holder.mAuthor.setText("Published At:-" + modelClassList.get(position).getAuthor());
-        holder.mHeading.setText("Published At:-" + modelClassList.get(position).getTitle());
-        holder.mContent.setText("Published At:-" + modelClassList.get(position).getDescription());
+
+        if(modelClassList.get(position).getDescription()==null){
+            holder.mAuthor.setText("Unknown");
+        }else{
+            holder.mAuthor.setText(modelClassList.get(position).getAuthor());
+        }
+        holder.mHeading.setText(modelClassList.get(position).getTitle());
+        if(modelClassList.get(position).getDescription()==null){
+            holder.mContent.setText("Please click the news to see the article");
+        }else{
+            holder.mContent.setText(modelClassList.get(position).getDescription());
+        }
         Glide.with(context).load(modelClassList.get(position).getUrlToImage()).placeholder(R.drawable.loading_image).into(holder.imageView);
     }
 

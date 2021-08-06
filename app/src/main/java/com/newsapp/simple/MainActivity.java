@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -22,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mToolbar = findViewById(R.id.toolBar);
-        setSupportActionBar(mToolbar);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       /* mToolbar = findViewById(R.id.toolBar);
+        setSupportActionBar(mToolbar);*/
 
         mHome=findViewById(R.id.home);
         msScience=findViewById(R.id.science);

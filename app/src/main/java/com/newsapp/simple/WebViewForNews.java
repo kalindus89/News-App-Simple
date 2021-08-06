@@ -9,12 +9,14 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class WebViewForNews extends AppCompatActivity {
 
     Toolbar toolbar;
     WebView webViewNews;
     ImageView go_back_home;
+    LinearLayout topBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +33,16 @@ public class WebViewForNews extends AppCompatActivity {
         webViewNews.setWebViewClient(new WebViewClient());
         webViewNews.loadUrl(url);
 
-
         go_back_home=findViewById(R.id.go_back_home);
         go_back_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        topBar=findViewById(R.id.topBar);
+        topBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
