@@ -13,7 +13,7 @@ import com.newsapp.simple.fragments.ScienceFragment;
 import com.newsapp.simple.fragments.SportsFragment;
 import com.newsapp.simple.fragments.TechnologyFragment;
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
+public class PagerAdapter extends FragmentPagerAdapter {
 
     int tabCount;
 
