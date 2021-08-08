@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mSports=findViewById(R.id.sports);
         countryCodePicker =findViewById(R.id.ccp);
         countryCodePicker.setAutoDetectedCountry(false);
-        countryCodePicker.setCountryForNameCode("US");
+        countryCodePicker.setCountryForNameCode("us");
 
 
         ViewPager viewPager =findViewById(R.id.fragmentContainer);
